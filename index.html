@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profesionální Stěhování | Vaše Firma</title>
+    <meta name="description" content="Spolehlivé a rychlé stěhování bytů, firem a těžkých břemen. Profesionální přístup a férové ceny. Poptávka zdarma.">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- ZÁKLADNÍ NASTAVENÍ (CSS Variables) --- */
+        :root {
+            --primary-color: #0066cc; /* Hlavní modrá barva - důvěryhodná */
+            --primary-dark: #004a99;  /* Tmavší verze pro tlačítka po najetí */
+            --secondary-bg: #f4f7f6;  /* Světle šedé pozadí pro sekce */
+            --text-dark: #2c3e50;     /* Tmavý text */
+            --text-light: #ffffff;    /* Světlý text */
+            --section-padding: 60px 20px; /* Odsazení sekcí */
+        }
+
+        /* Reset prohlížeče pro konzistentní vzhled */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: #fff;
+        }
+
+        h1, h2, h3 {
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--primary-color);
+        }
+        
+        /* Pomocná třída pro kontejner (udržuje obsah uprostřed na velkých monitorech) */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* Tlačítka */
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn:hover {
+            background-color: var(--primary-dark);
+        }
+
+        /* --- 1. HERO SEKCE (Úvodní obrázek) --- */
+        #hero {
+            /* TODO: Nahraďte URL adresu vlastním kvalitním obrázkem */
+            background-image:  url('image/main_auto .png');
+            background-size: cover;
+            background-position: center;
+            height: 90vh; /* Výška na 90% obrazovky */
+            display: flex;
+            align-items:flex-start;
+            justify-content: center;
+            text-align: center;
+            color: black;
+            padding: 0 20px;
+        }
+
+        #hero h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        #hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+
+
+
+
+        /* Úprava pro mobily - menší text */
+        @media (max-width: 768px) {
+            #hero h1 { font-size: 2rem; }
+            #hero p { font-size: 1rem; }
+        }
+
+
+        /* --- 2. SEKCE SLUŽEB --- */
+        #services {
+            padding: var(--section-padding);
+            background-color: var(--secondary-bg);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Magie responzivity: automaticky řadí karty vedle sebe nebo pod sebe */
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .service-card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px); /* Jemný efekt zdvihnutí při najetí myší */
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+
+        /* --- 3. POPTÁVKOVÝ FORMULÁŘ --- */
+        #contact {
+            padding: var(--section-padding);
+            align-items:end;
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+
+        textarea.form-control {
+            resize: vertical; /* Povolit změnu velikosti jen na výšku */
+            height: 120px;
+        }
+        
+        .btn-block {
+            width: 100%;
+            display: block;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background: var(--text-dark);
+            color: var(--text-light);
+            text-align: center;
+            padding: 20px;
+            margin-top: auto;
+        }
+
+    </style>
+</head>
+<body>
+
+    <section id="hero">
+        <div class="hero-content">
+            <h1>DOPRAVA STĚHOVANÍ VYKLIZENÍ </h1>
+            <p>Profesionální stěhovací služby pro firmy i domácnosti. Rychle, bezpečně a za férové ceny.</p>
+          <a href="#contact" class="btn">Nezávazná poptávka</a>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="container">
+            <h2>Naše služby</h2>
+            <p style="text-align: center;">Postaráme se o vše od A do Z. Vyberte si, co potřebujete.</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🚚</div>
+                    <h3>PŘEPRAVA ZBOŽÍ</h3>
+                    <p>Standardní zakázková služba, která může být jednorázová i pravidelná. Příkladem lze uvést
+společnost MP-SPED a její zásobování prodejen H&M, kdy bude s touto společností zahájeno
+jednání ihned po uvedení této autodopravy do provozu. Nadále bude pokračovat i jednání se
+společností Zásilkovna – bude nabídnuto pomocné vozidlo.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🧑🏻‍🦱🚚</div>
+                    <h3>PRONÁJEM DODÁVKY S ŘIDIČEM</h3>
+                    <p>Standardní zakázková služba, při které si zákazník objedná vozidlo i s řidičem a to na přepravu
+zboží, materiálu nebo cenin. Nakládku a vykládku si zákazník zajišťuje sám s pomocí řidiče – ten
+v autě zboží přeskládá, uloží a uchytí.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🏚️</div>
+                    <h3>VYKLÍZENÍ</h3>
+                    <p>Standardní zakázková služba, kdy zákazník si objedná vyklizení půdy, garáže, bytu či firemního
+objektu. Zákazník se o nic nestará – přijde do čistého a hotového prostoru.</p>
+                </div>
+
+
+                <div class="service-card">
+                    <div class="service-icon">📦</div>
+                    <h3>STĚHOVÁNÍ</h3>
+                    <p>Standardní zakázková služba, kdy zákazník si objedná převoz nábytku z bodu A do bodu B.
+Zákazník má svépomocí vše připraveno na převoz.</p>
+
+ </div>
+                <div class="service-card">
+                    <div class="service-icon">🏠</div>
+                    <h3>STĚHOVÁNÍ NA KLÍČ</h3>
+                    <p>Nadstandardní prémiová služba, kdy zákazník si objedná převoz nábytku z bodu A do bodu B.
+Zákazník se o nic nestará – naše společnost mu zajistí obalové materiály, převozní
+pytle/tašky/krabice, nemusí být absolutně připraven – jen předá klíče z obou míst. Na místě B, po
+předchozí dohodě a popisu, vše najde tak, jak si přeje – samozřejmostí je úklid obou objektů po
+práci, zkrátka přijde do hotového a plně připraveného k užití. Naše společnost má na tento úkon
+zpravidla 24 hodin, to znamená tak, že do večera je vše v autě a další den po obědě už může
+zákazník přijít a objekt využívat.
+Tato služba je vzorem francouzské stěhovací služby, která v České republice nemá obdoby ani
+konkurenci, jsme na trhu s tímto konceptem úplně první.</p>
+
+
+
+                </div>
+
+
+
+
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Zašlete nám poptávku</h2>
+            <p style="text-align: center; margin-bottom: 30px;">Vyplňte formulář a my se vám ozveme s cenovou nabídkou. Nezávazně.</p>
+            
+            <div class="form-container">
+                <form action="https://formsubmit.co/muf666@gmail.com" method="POST">
+                    
+                    <input type="hidden" name="_subject" value="Nová poptávka ze stěhovacího webu!">
+                    <input type="hidden" name="_captcha" value="false"> <div class="form-group">
+                        <label for="name">Jméno a příjmení *</label>
+                        <input type="text" id="name" name="jmeno" class="form-control" required placeholder="Jan Novák">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Váš e-mail *</label>
+                        <input type="email" id="email" name="email" class="form-control" required placeholder="jan.novak@email.cz">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Telefon</label>
+                        <input type="tel" id="phone" name="telefon" class="form-control" placeholder="+420 777 123 456">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Co potřebujete přestěhovat? *</label>
+                        <textarea id="message" name="zprava" class="form-control" required placeholder="Popište prosím stručně o jaký typ stěhování jde (byt 2+kk, kancelář, odkud/kam, přibližný termín)..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-block">Odeslat nezávaznou poptávku</button>
+                    <p style="text-align: center; margin-top: 15px; font-size: 0.9em; color: #666;">Položky označené * jsou povinné.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Lipner. Všechna práva vyhrazena.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
