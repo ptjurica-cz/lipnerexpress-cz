@@ -71,9 +71,10 @@ h2 { text-align: center; font-size: 2.5rem; color: var(--primary-color); }
 
 .hero-text {
     text-align: center;
-    /* Pokud je obrázek světlý, text bude černý. Pokud tmavý, změňte na white */
-    color: black; 
-    /* color: white; text-shadow: 2px 2px 5px rgba(0,0,0,0.7); */
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
 }
 
 #hero h1 { font-size: 3rem; margin-bottom: 10px; }
@@ -125,6 +126,47 @@ h2 { text-align: center; font-size: 2.5rem; color: var(--primary-color); }
 .service-card:hover { transform: translateY(-5px); }
 .service-icon { font-size: 3rem; color: var(--primary-color); margin-bottom: 20px; }
 
+
+/* --- KONTAKTNÍ INFORMACE --- */
+#contact-info {
+    padding: 40px 20px;
+    background-color: var(--secondary-bg);
+}
+
+.contact-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.contact-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.contact-card h3 {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+}
+
+.contact-card p {
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.contact-card a {
+    text-decoration: none;
+    color: var(--text-dark);
+    transition: color 0.3s ease;
+}
+
+.contact-card a:hover {
+    color: var(--primary-color);
+}
 
 /* --- FORMULÁŘ --- */
 #contact { padding: var(--section-padding); }
